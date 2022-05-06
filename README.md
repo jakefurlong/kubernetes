@@ -1,2 +1,0 @@
-# kubernetes
-All things Kubernetes
