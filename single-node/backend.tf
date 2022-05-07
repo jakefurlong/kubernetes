@@ -1,9 +1,9 @@
 terraform {
   backend "s3" {
     bucket         = "kubernimbus-state"
-    key            = "global/s3/network/terraform.tfstate"
+    key            = "global/s3/single-node/terraform.tfstate"
     region         = "us-east-1"
-    dynamodb_table = "kubernimbus-network-locks"
+    dynamodb_table = "kubernimbus-single-node-locks"
     encrypt        = true
   }
 }
