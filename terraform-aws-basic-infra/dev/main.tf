@@ -1,8 +1,5 @@
-# Create a simple AWS network with remote backend
+# remote backend config goes here
 
-module "backend" {
-  source = "../modules/backend"
-
-  bucket-name         = "ndo-dev-terraform-state"
-  dynamodb-table-name = "ndo-dev-terraform-locks"
+module "network" {
+    source = "../modules/network"
 }
