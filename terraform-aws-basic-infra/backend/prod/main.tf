@@ -5,4 +5,5 @@ module "backend" {
 
   bucket-name         = "ndo-prod-terraform-state"
   dynamodb-table-name = "ndo-prod-terraform-locks"
+  aws-region          = "us-east-1"
 }
