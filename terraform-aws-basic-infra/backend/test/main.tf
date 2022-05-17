@@ -1,4 +1,4 @@
-# Create a simple AWS network with remote backend
+# Create remote backend resources in AWS
 
 module "backend" {
   source = "github.com/jakefurlong/terraform/modules/backend"
