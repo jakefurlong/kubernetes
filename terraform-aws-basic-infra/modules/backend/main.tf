@@ -1,9 +1,9 @@
 # Create bucket for backend k8s state files
 resource "aws_s3_bucket" "k8s_bucket" {
-  bucket = "kubernimbus-state"
+  bucket = var.bucket-name
   tags = {
-    Name        = "kubernimbus-state"
-    Environment = "kubernetes"
+    Name        = var.bucket-name
+    Environment = "terraform"
   }
 }
 
@@ -28,18 +28,7 @@ resource "aws_s3_bucket_versioning" "k8s_bucket_versioning" {
 
 # Create DynamoDB table for Terraform network locks
 resource "aws_dynamodb_table" "k8s_network_locks" {
-  name         = "kubernimbus-network-locks"
-  billing_mode = "PAY_PER_REQUEST"
-  hash_key     = "LockID"
-  attribute {
-    name = "LockID"
-    type = "S"
-  }
-}
-
-# Create DynamoDB table for Terraform single-node locks
-resource "aws_dynamodb_table" "k8s_single_node_locks" {
-  name         = "kubernimbus-single-node-locks"
+  name         = var.dynamodb-table-name
   billing_mode = "PAY_PER_REQUEST"
   hash_key     = "LockID"
   attribute {
