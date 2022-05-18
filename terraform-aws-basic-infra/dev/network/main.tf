@@ -21,3 +21,7 @@ module "network" {
   private-subnet-cidr-b = "172.16.4.0/24"
   private-subnet-cidr-c = "172.16.5.0/24"
 }
+
+output "vpc_id" {
+  value = module.network.custom_vpc_id
+}
