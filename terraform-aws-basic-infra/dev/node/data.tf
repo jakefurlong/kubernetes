@@ -1,4 +1,5 @@
 # Return the AMI id of the most current Amazon Linux 2 Machine Image
+
 data "aws_ami" "std_ami" {
   most_recent = true
   owners      = ["amazon"]
