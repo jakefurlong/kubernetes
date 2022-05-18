@@ -1,4 +1,4 @@
-# Build a basic AWS network with an EC2 instance running minikube
+# Build a basic AWS network 
 
 terraform {
   backend "s3" {
