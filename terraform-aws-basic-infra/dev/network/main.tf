@@ -3,7 +3,7 @@
 terraform {
   backend "s3" {
     bucket         = "ndo-dev-terraform-state"
-    key            = "dev/terraform.tfstate"
+    key            = "dev/network/terraform.tfstate"
     region         = "us-east-1"
     dynamodb_table = "ndo-dev-terraform-locks"
   }
@@ -20,5 +20,4 @@ module "network" {
   private-subnet-cidr-a = "172.16.3.0/24"
   private-subnet-cidr-b = "172.16.4.0/24"
   private-subnet-cidr-c = "172.16.5.0/24"
-  my-ip                 = "174.51.57.8"
 }
