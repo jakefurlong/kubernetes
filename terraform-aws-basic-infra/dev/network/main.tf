@@ -1,4 +1,4 @@
-# Build a basic AWS network 
+# Build a basic AWS network
 
 terraform {
   backend "s3" {
